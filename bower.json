@@ -1,0 +1,21 @@
+{
+  "name": "lostandfound.com.ph",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kenblizzard/lostandfound.com.ph",
+  "authors": [
+    "kenblizzard <kenneth.bolico@gmail.com>"
+  ],
+  "main": "app/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5"
+  }
+}
