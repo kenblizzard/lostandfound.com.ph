@@ -1,0 +1,36 @@
+.main
+{
+    margin-top: 60px;
+}
+
+.home-browse-btn
+{
+    min-height: 150px;
+    min-width: 150px;
+    margin: 5px;
+}
+
+.home-search-select
+{
+    max-height: 100px;
+    max-width: 200px;
+}
+
+.home-search-panel
+{
+    display: inline-block;
+    margin: 0 auto;
+    width: 500px;    
+}
+
+.home-search-panel *
+{
+    height: 50px;
+}
+
+.header-nav
+{
+     -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
