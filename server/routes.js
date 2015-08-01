@@ -1,4 +1,4 @@
-var posts = require('./models/postsModel');
+var posts  = require('./models/postsModel');
 
     module.exports = function(app) {
 
@@ -7,17 +7,9 @@ var posts = require('./models/postsModel');
         // authentication routes
 
         // sample api route
-        app.get('/api/posts', function(req, res) {
-            // use mongoose to get all nerds in the database
-            posts.find(function(err, nerds) {
-
-                // if there is an error retrieving, send the error. 
-                                // nothing after res.send(err) will execute
-                if (err)
-                    res.send(err);
-
-                res.json(posts); // return all nerds in JSON format
-            });
+        app.get('/api/post/:id', function(req, res) {
+            // use mongoose to get all nerds in the database                       
+            res.send(posts.getPost(req.params.id));
         });
 
         // route to handle creating goes here (app.post)

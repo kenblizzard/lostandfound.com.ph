@@ -7,8 +7,15 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             templateUrl: 'views/home.html',
             controller: 'MainController'
         })
-
-        // nerds page that will use the NerdController        
+        .when('/user/', {
+            templateUrl: 'views/userProfile.html',
+            controller: 'UserProfileController'
+        })
+        .when('/post/:postId', {
+            templateUrl: 'views/post.html',
+            controller: 'PostController'
+        })
+                
     $locationProvider.html5Mode(true);
 
 }]);
