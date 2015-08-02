@@ -7,7 +7,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             templateUrl: 'views/home.html',
             controller: 'MainController'
         })
-        .when('/user/', {
+        .when('/user/:username', {
             templateUrl: 'views/userProfile.html',
             controller: 'UserProfileController'
         })

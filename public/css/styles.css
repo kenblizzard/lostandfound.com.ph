@@ -20,17 +20,127 @@
 {
     display: inline-block;
     margin: 0 auto;
-    width: 500px;    
+    width: 500px;
 }
 
-.home-search-panel *
-{
-    height: 50px;
-}
+    .home-search-panel *
+    {
+        height: 50px;
+    }
 
 .header-nav
 {
-     -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+}
+
+.user-profile
+{
+    
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 10px;    
+    background-color: #f5f5f5;
+    
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.user-profile-img
+{
+    height: 100%;
+    width: 100%;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.user-profile-post
+{
+    /*border: gray 1px solid;*/
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+    margin: 1px 5px 10px;
+    padding: 5px;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.user-profile-post-found
+{
+    box-shadow: 1px 1px 1px 1px rgba(0,80,125,0.5);
+}
+
+.user-profile-post-lost
+{
+    box-shadow: 1px 1px 1px 1px rgba(125,0,0,0.5);
+}
+
+.user-profile-post-carousel
+{
+    height: 145px;
+    width: 145px;
+}
+
+.user-profile-post-carousel-photo
+{
+    vertical-align: middle;
+    height:100%;
+    width:100%;
+    
+	min-width: 145px;
+	min-height: 145px;
+	max-width: 145px;
+	max-height: 145px;
+
+	display: -moz-inline-box; /* Firefox 2 */
+	display: inline-block;
+}
+
+.tab-pane
+{       
+    border:  #ddd 1px solid;
+    border-top: 0px;
+}
+
+.user-profile-post-description
+{
+    text-overflow: ellipsis;    
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.user-profile-select-div
+{
+    width: 100%;
+    margin: 5px 10px 5px -5px;
+    display:inline-block;
+}
+
+.user-profile-select
+{
+    max-width: 150px;
+}
+
+.user-profile-post-carousel-type-text-lost
+{
+    position:absolute;
+    background-color: rgba(125,0,0,.5);
+    z-index: 1000;
+    color:white;
+    width: 100%;
+}
+
+.user-profile-post-carousel-type-text-found
+{
+    position:absolute;
+    background-color: rgba(0,80,125,.5);
+    z-index: 1000;
+    color:white;
+    width: 100%;
+}
+
+.angular-google-map-container {
+    height: 400px !important;
 }

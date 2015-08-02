@@ -1,4 +1,8 @@
 ﻿<h1>Post</h1>
 
-<button ng-click="getPost()">Test</button>
-{{post}}
+<script type="text/ng-template" id="searchbox.tpl.html">
+        <input type="text" placeholder="Search Box">
+    </script>
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+        <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
+    </ui-gmap-google-map>

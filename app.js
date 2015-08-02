@@ -1,11 +1,20 @@
-var express        = require('express');
-var app            = express();
+//var express        = require('express');
+//var app = express();
+//var io = require('socket.io');
+
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var config = require('./config/config');
+var io = require('socket.io');
+
+var express = require('express');
+var app = express();
+var http = require('http');
+var server = http.createServer(app);
+var io = require('socket.io')(server);
 
 // configuration ===========================================
-var db = require('./config/db');
-var port = process.env.PORT || 8080; 
+var port = config.port; 
 
 app.use(bodyParser.json()); 
 
@@ -20,8 +29,15 @@ app.use(express.static(__dirname + '/public'));
 // routes ==================================================
 require('./server/routes')(app); // configure our routes
 
-app.listen(port);               
-                   
-console.log('Magic happens on port ' + port);
+server.listen(port, function () {
+    console.log('Server listening at port %d', port);
+});
+//io.listen(app);
+
+
+io.on('connection', function (socket) {
+    console.log('connected to socket.io');
+});
+
           
 exports = module.exports = app;                         

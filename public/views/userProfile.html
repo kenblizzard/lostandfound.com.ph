@@ -1,1 +1,48 @@
-﻿<h1>Hello</h1>  
+﻿<div class="container user-profile">
+    <h2>{{currentUser.name}} </h2>
+    <div class="row">
+        <div class="col-md-3">
+
+            <img class="img-rounded user-profile-img" src="https://avatars3.githubusercontent.com/{{currentUser.username}}" />
+            <h4><i>@{{currentUser.username}}</i></h4>
+            <h4>{{currentUser.email}}</h4>
+
+        </div>
+        <div class="col-md-9">            
+            <tabset>
+                <tab heading="Your Posts" class="tab">
+                    <div class="user-profile-select-div">
+                        <select class="form-control user-profile-select pull-right">
+                            <option>All</option>
+                            <option>Found</option>
+                            <option>Missing</option>
+                        </select>
+                    </div>
+                    <div class='user-profile-post user-profile-post-{{post.type}}' ng-repeat="post in currentUser.posts">                        
+                        <div class="col-md-3 col-sm-3 col-xs-4">
+                            <carousel class='user-profile-post-carousel' interval="myInterval" no-wrap="noWrapSlides">
+                              <slide ng-repeat="photo in post.photos" active="slide.active">
+                                <div class="user-profile-post-carousel-type-text-{{post.type}}"><strong style="text-transform: capitalize">{{post.type.toLowerCase()}}</strong></div>
+                                <img class=" user-profile-post-carousel-photo" ng-src="{{photo}}" >                               
+                              </slide>
+                            </carousel>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-8" >
+                            <a href="/post/{{post.postId}}" target="_blank"><h4>{{post.title}}</h4></a>
+                            <p class="user-profile-post-description">{{post.description}}</p>
+                            <small><strong>Date {{post.type}}: </strong><em>{{post.datePosted | date: "MMM dd yyyy 'at' hh:mm a"}}</em></small>
+                        </div>
+                    </div>
+                </tab>                
+                <tab>
+                <tab-heading>
+                    <i class="fa fa-envelope fa-lg"></i> Messages <span class="badge">{{currentUser.inboxMsgs.length}}</span>
+                </tab-heading>                
+                    <div></div>
+                </tab>
+                <tab heading="Account Information">                               
+                </tab>
+            </tabset> 
+        </div>
+    </div>
+</div>
