@@ -1,5 +1,6 @@
-angular.module('PostController', ['PostFactory', 'uiGmapgoogle-maps','appMaps']).controller('PostController',
-    function ($scope, PostFactory, $routeParams, uiGmapGoogleMapApi) {
+lostAndFoundApp.controller('PostController',
+   ['$scope', 'PostFactory', 'uiGmapGoogleMapApi', '$routeParams',
+    function ($scope, PostFactory, uiGmapGoogleMapApi, $routeParams) {
 
         uiGmapGoogleMapApi.then(function () {
             console.log('map is ready');
@@ -32,9 +33,9 @@ angular.module('PostController', ['PostFactory', 'uiGmapgoogle-maps','appMaps'])
 
 
         $scope.map = { center: { latitude: 40.1451, longitude: -99.6680 }, zoom: 4 };
-        $scope.options = { scrollwheel: false };       
+        $scope.options = { scrollwheel: false };
         $scope.searchbox = { template: 'searchbox.tpl.html', events: events };
-        
+
 
 
 
@@ -49,4 +50,4 @@ angular.module('PostController', ['PostFactory', 'uiGmapgoogle-maps','appMaps'])
         $scope.searchItem = function () {
             alert('hi');
         }
-    });
+    }]);

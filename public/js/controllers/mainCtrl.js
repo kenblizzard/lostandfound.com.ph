@@ -1,8 +1,7 @@
-angular.module('MainController', ['uiGmapgoogle-maps', 'appMaps']).controller('MainController',
-    function ($scope, uiGmapGoogleMapApi) {        
-        
-        
-
+lostAndFoundApp.controller('MainController',
+    ['$scope', 'uiGmapGoogleMapApi', 'PostFactory',
+    function ($scope, uiGmapGoogleMapApi, PostFactory) {        
+        PostFactory.getPost(1);
         uiGmapGoogleMapApi.then(function () {
             console.log('map is ready');
         });
@@ -44,4 +43,4 @@ angular.module('MainController', ['uiGmapgoogle-maps', 'appMaps']).controller('M
         $scope.searchItem = function () {
             alert('hi');
         }
-    });
+    }]);

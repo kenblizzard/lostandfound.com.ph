@@ -1,4 +1,6 @@
-﻿angular.module('UserFactory', []).factory('UserFactory', ['$http', '$q', function ($http, $q) {
+﻿lostAndFoundApp.factory('UserFactory',
+    ['$http', '$q',
+        function ($http, $q) {
 
     var socket = io.connect();
 

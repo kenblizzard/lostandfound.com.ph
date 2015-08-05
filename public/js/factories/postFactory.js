@@ -1,4 +1,4 @@
-angular.module('PostFactory', []).factory('PostFactory', ['$http', '$q', function ($http, $q) {
+lostAndFoundApp.factory('PostFactory', ['$http', '$q', function ($http, $q) {
 
     return {
         // call to get all nerds

@@ -1,4 +1,6 @@
-﻿angular.module('UserProfileController', ['UserFactory','ui.bootstrap']).controller('UserProfileController', function ($scope, UserFactory,$routeParams) {
+﻿lostAndFoundApp.controller('UserProfileController',
+    ['$scope', 'UserFactory', '$routeParams',
+    function ($scope, UserFactory, $routeParams) {
 
     UserFactory.getUser($routeParams.username)
     .then(function (data) {
@@ -11,4 +13,4 @@
     $scope.searchItem = function () {
         alert('hi');
     }
-});
+}]);
