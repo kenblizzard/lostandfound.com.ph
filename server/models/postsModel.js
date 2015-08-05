@@ -1,3 +1,5 @@
+var postsDB = require('../db_scripts/postsDb');
+
 var posts = {
     getPost: function (id) {
         var post;
@@ -13,6 +15,11 @@ var posts = {
                 break;
         }      
         return post;
+    },
+
+    getPosts: function (sendDataCallback, res) {
+        console.log(JSON.stringify(postsDB));
+        return postsDB.getPosts(sendDataCallback, res);        
     }
 }
 

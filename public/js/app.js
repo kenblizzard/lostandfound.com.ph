@@ -6,5 +6,6 @@ var lostAndFoundApp = angular.module('lostAndFoundApp',
         'PostController',
         'PostFactory',
         'ui.bootstrap',
-        'appMaps'
+        'appMaps',
+        'PostsController'
     ]);

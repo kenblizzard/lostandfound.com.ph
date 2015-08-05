@@ -1,7 +1,7 @@
 {
   "name": "lostandfound.com.ph",
   "version": "0.0.1",
-  "description": "A website for lost and found items in Ph",
+  "description": "A website for lost and found items in the Philippines",
   "main": "app.js",
   "scripts": {
     "test": "mocha"

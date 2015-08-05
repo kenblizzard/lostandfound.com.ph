@@ -7,21 +7,21 @@ module.exports = function (app) {
         console.log(data);
         res.send(JSON.stringify(data));
     }
-
-
+    
     // server routes ===========================================================
     // handle things like api calls
     // authentication routes
 
-    // sample api route
-    app.get('/api/post/:id', function (req, res) {
-        // use mongoose to get all nerds in the database                       
+    app.get('/api/post/:id', function (req, res) {      
         res.send(posts.getPost(req.params.id));
     });
 
-    app.get('/api/user/:id', function (req, res) {
-        // use mongoose to get all nerds in the database                       
+    app.get('/api/user/:id', function (req, res) {        
         users.getUser(req.params.id, sendDataCallback, res);
+    });
+
+    app.get('/api/posts', function (req, res) {
+        posts.getPosts(sendDataCallback, res);
     });
 
     // route to handle creating goes here (app.post)

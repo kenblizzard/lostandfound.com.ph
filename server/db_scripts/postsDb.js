@@ -8,22 +8,29 @@
 
 var url = config.dburl;
 
-var usersDb = {
-    findUser: function (userId) {
+var postsDb = {
+    getPosts: function (sendDataCallback, res) {
         MongoClient.connect(url, function (err, db) {
             if (err) {
-                console.error('personDb - getPerson: Error connecting to MongoDb: ' + JSON.stringify(err));
-                callback(err, null);
+                console.log('postsDb - getPosts: Error connecting to MongoDb: ' + err);
             }
 
-            var collection = db.collection('persons');
-            collection.findOne({ username: message.username }, function (err, doc) {
+            var collection = db.collection('users');
+            collection.aggregate([
+                {
+                    $unwind: "$posts"
+                }
+            ]).toArray(function (err, data) {
+                if (err) {
+                    console.log(err);
+                }
+
                 db.close();
-                callback(err, doc);
+                sendDataCallback(res, data);
             });
         });
 
     }
 }
 
-module.export = usersDb;
+module.exports = postsDb;
