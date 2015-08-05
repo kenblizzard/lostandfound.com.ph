@@ -1,4 +1,4 @@
-﻿lostAndFoundApp.controller('UserProfileController',
+﻿angular.module('lostAndFoundApp').controller('UserProfileController',
     ['$scope', 'UserFactory', '$routeParams',
     function ($scope, UserFactory, $routeParams) {
 

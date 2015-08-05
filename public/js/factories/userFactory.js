@@ -1,4 +1,4 @@
-﻿lostAndFoundApp.factory('UserFactory',
+﻿angular.module('lostAndFoundApp').factory('UserFactory',
     ['$http', '$q',
         function ($http, $q) {
 

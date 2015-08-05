@@ -1,4 +1,4 @@
-﻿lostAndFoundApp
+﻿angular.module('lostAndFoundApp')
     .config(['uiGmapGoogleMapApiProvider',
         function (uiGmapGoogleMapApiProvider) {
             uiGmapGoogleMapApiProvider.configure({

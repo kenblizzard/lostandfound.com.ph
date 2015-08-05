@@ -1,4 +1,4 @@
-lostAndFoundApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+angular.module('lostAndFoundApp').config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider       
         .when('/', {
             templateUrl: 'views/home.html',

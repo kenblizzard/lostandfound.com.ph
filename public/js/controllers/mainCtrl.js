@@ -1,4 +1,4 @@
-lostAndFoundApp.controller('MainController',
+angular.module('lostAndFoundApp').controller('MainController',
     ['$scope', 'uiGmapGoogleMapApi', 'PostFactory',
     function ($scope, uiGmapGoogleMapApi, PostFactory) {        
         PostFactory.getPost(1);
