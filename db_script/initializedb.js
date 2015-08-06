@@ -179,6 +179,8 @@ MongoClient.connect(url, function(err, db) {
 
 	usersCollection = db.collection('users');
 	
+	usersCollection.drop();
+	
 	console.log("We are connected to " + url);
 
 

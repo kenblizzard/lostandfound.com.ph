@@ -12,7 +12,7 @@ angular.module('lostAndFoundApp').config(['$routeProvider', '$locationProvider',
             templateUrl: 'views/post.html',
             controller: 'PostController'
         })
-        .when('/posts', {
+        .when('/posts/:query', {
             templateUrl: 'views/posts.html',
             controller: 'PostsController'
         })

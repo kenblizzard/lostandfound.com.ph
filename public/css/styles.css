@@ -144,3 +144,31 @@
 .angular-google-map-container {
     height: 400px !important;
 }
+
+.search-filters {
+    width: 200px;
+}
+
+.fleft {
+    float: left;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.search-preview {
+    width: 130px;
+    height: 100px;
+}
+
+.result-box {
+    border: solid 1px gray;
+}
+
+.img-preview {
+    width: 130px;
+    height: 100px;
+    max-width: 130px;
+    max-height: 100px;
+}

@@ -6,9 +6,10 @@
 
     return {
         // call to get all posts
-        getPosts: function () {
+        getPosts: function (query) {
+            //console.log("postsFactory getPosts query:", query);
             var defer = $q.defer();
-            $http.get('api/posts/')
+            $http.get('api/posts/' + query)
             .success(function (data) {
                 defer.resolve(data);
             });

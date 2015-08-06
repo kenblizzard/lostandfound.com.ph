@@ -9,7 +9,7 @@
 var url = config.dburl;
 
 var postsDb = {
-    getPosts: function (sendDataCallback, res) {
+    getPosts: function (regExp, sendDataCallback, res) {
         MongoClient.connect(url, function (err, db) {
             if (err) {
                 console.log('postsDb - getPosts: Error connecting to MongoDb: ' + err);
@@ -19,10 +19,18 @@ var postsDb = {
             collection.aggregate([
                 {
                     $unwind: "$posts"
+                },
+                {
+                    $match: {
+                        $or: [
+                            { "posts.title": { $regex: regExp } },
+                            { "posts.description": { $regex: regExp } }
+                        ]
+                    }
                 }
             ]).toArray(function (err, data) {
                 if (err) {
-                    console.log(err);
+                    console.log("Error: ", err);
                 }
 
                 db.close();

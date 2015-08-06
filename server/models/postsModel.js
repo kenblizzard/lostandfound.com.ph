@@ -17,9 +17,10 @@ var posts = {
         return post;
     },
 
-    getPosts: function (sendDataCallback, res) {
-        console.log(JSON.stringify(postsDB));
-        return postsDB.getPosts(sendDataCallback, res);        
+    getPosts: function (query, sendDataCallback, res) {
+        var regExp = new RegExp(query, "i");
+        console.log("postsModel getPosts regExp: ", regExp);
+        postsDB.getPosts(regExp, sendDataCallback, res);        
     }
 }
 

@@ -1,3 +1,16 @@
-﻿<h1>{{regine}}</h1>
-
-<p ng-repeat="user in testfactory">{{user.posts}}</p>
+﻿<h2>{{params}}</h2>
+<div class="row">
+    <div class="search-filters fleft col-md-2">
+        Search filters are here
+    </div>
+    <!--<p ng-repeat="user in data">{{user.posts}}</p>-->
+    <div class="search-results fleft col-md-10">
+        <div class="result-box fleft" ng-repeat="user in data">
+            <div class="search-preview">
+                <a title="" href="#">
+                    <img class="img-preview" src="{{user.posts.photos[0]}}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

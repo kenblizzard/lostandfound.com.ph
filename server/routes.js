@@ -1,10 +1,10 @@
-var posts = require('./models/postsModel');
-var users = require('./models/usersModel');
+var postsModel = require('./models/postsModel');
+var usersModel = require('./models/usersModel');
 
 module.exports = function (app) {
 
     var sendDataCallback = function(res, data) {
-        console.log(data);
+        console.log("sendDataCallback data: ", data);
         res.send(JSON.stringify(data));
     }
     
@@ -13,15 +13,16 @@ module.exports = function (app) {
     // authentication routes
 
     app.get('/api/post/:id', function (req, res) {      
-        res.send(posts.getPost(req.params.id));
+        res.send(postsModel.getPost(req.params.id));
     });
 
     app.get('/api/user/:id', function (req, res) {        
-        users.getUser(req.params.id, sendDataCallback, res);
+        usersModel.getUser(req.params.id, sendDataCallback, res);
     });
 
-    app.get('/api/posts', function (req, res) {
-        posts.getPosts(sendDataCallback, res);
+    app.get('/api/posts/:query', function (req, res) {
+        console.log("Query: ", req.params.query);
+        postsModel.getPosts(req.params.query, sendDataCallback, res);
     });
 
     // route to handle creating goes here (app.post)
