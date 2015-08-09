@@ -1,14 +1,24 @@
-﻿<h2>{{params}}</h2>
+﻿<h2>{{data.length}} results for "{{params}}"</h2>
 <div class="row">
-    <div class="search-filters fleft col-md-2">
+    <div class="search-filters pull-left col-md-2">
         Search filters are here
     </div>
     <!--<p ng-repeat="user in data">{{user.posts}}</p>-->
-    <div class="search-results fleft col-md-10">
-        <div class="result-box fleft" ng-repeat="user in data">
-            <div class="search-preview">
-                <a title="" href="#">
+    <div class="search-results pull-left col-md-10">
+        <div class="result-box pull-left" ng-repeat="user in data">
+            <div class="result-preview center-block">
+                <a title="{{user.posts.title}}" href="#">
                     <img class="img-preview" src="{{user.posts.photos[0]}}"/>
+                </a>
+            </div>
+            <div class="result-cap">
+                <a title="{{user.posts.title}}" href="#">
+                    <div class="result-title-wrap">
+                        <h4 class="result-title">{{user.posts.title}}</h4>
+                    </div>
+                    <p class="-gray"><i class="fa fa-clock-o"></i><small> Posted {{user.posts.datePosted}}</small></p>
+                    <p class="-gray"><i class="fa fa-map-marker"></i><small> {{user.posts.postCity}}, {{user.posts.postProvince}}</small>
+                    </p>
                 </a>
             </div>
         </div>

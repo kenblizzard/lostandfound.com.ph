@@ -149,26 +149,46 @@
     width: 200px;
 }
 
-.fleft {
-    float: left;
-}
-
-.tcenter {
-    text-align: center;
-}
-
-.search-preview {
+.result-preview {
     width: 130px;
     height: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: solid 1px gray;
 }
 
 .result-box {
     border: solid 1px gray;
+    width: 200px;
+    max-width: 200px;
+    height: 270px;
+    max-height: 270px;
+    padding: 10px;
+}
+
+.result-title-wrap{
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+    font-size: $font-size;
+    line-height: normal;
+    overflow: hidden;
 }
 
 .img-preview {
     width: 130px;
-    height: 100px;
     max-width: 130px;
+    height: 100px;
     max-height: 100px;
+}
+
+
+/************CSS Helpers**************/   
+
+.-gray{
+    color: gray;
+}
+
+.-tcenter {
+    text-align: center;
 }
