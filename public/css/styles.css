@@ -1,6 +1,7 @@
 .main
 {
     margin-top: 60px;
+    min-height: 100%;
 }
 
 .home-browse-btn
@@ -10,11 +11,27 @@
     margin: 5px;
 }
 
+.footer {
+     background-color: rgba(0, 38, 58,.8) !important;  
+     display: inline-block;
+     width: 100%;
+}
+
 .home-search-select
 {
     max-height: 100px;
     max-width: 200px;
 }
+
+body {
+    height:100%;
+    background: url(../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 .home-search-panel
 {
@@ -28,12 +45,25 @@
         height: 50px;
     }
 
-.header-nav
-{
-    -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
-    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+.header-nav {
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 255, 255,0.2);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0, 255, 255,0.2);
+    box-shadow: 0 8px 6px -6px rgba(0, 255, 255,0.2);
+    background-color: rgba(0, 38, 58,.8) !important;    
 }
+
+.header-nav .link-btn{
+    color: cyan !important;
+}
+
+.header-nav .link-btn:hover {
+    background-color: cyan;
+    color: rgb(0, 38, 58) !important;
+ } 
+
+.header-nav li:hover {
+    background-color: cyan;    
+ } 
 
 .user-profile
 {
