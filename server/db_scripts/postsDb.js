@@ -25,7 +25,8 @@ var postsDb = {
                         $or: [
                             { "posts.title": { $regex: regExp } },
                             { "posts.description": { $regex: regExp } }
-                        ]
+                        ],
+                        "posts.postActive": true
                     }
                 }
             ]).toArray(function (err, data) {

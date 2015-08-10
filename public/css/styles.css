@@ -149,14 +149,6 @@
     width: 200px;
 }
 
-.result-preview {
-    width: 130px;
-    height: 100px;
-    margin-bottom: 10px;
-    text-align: center;
-    border: solid 1px gray;
-}
-
 .result-box {
     border: solid 1px gray;
     width: 200px;
@@ -166,29 +158,70 @@
     padding: 10px;
 }
 
+.result-preview {
+    width: 170px;
+    height: 100px;
+    text-align: center;
+    border: solid 1px LightGray;
+}
+
+.post-type-text-found
+{
+    position:absolute;
+    background-color: rgba(0,80,125,.5);
+    z-index: 1000;
+    color:white;
+    width: inherit;
+}
+
+.post-type-text-lost
+{
+    position:absolute;
+    background-color: rgba(125,0,0,.5);
+    z-index: 1000;
+    color:white;
+    width: inherit;
+}
+
+.img-preview {
+    max-width: 170px;
+    height: 98px;
+    max-height: 98px;
+}
+
 .result-title-wrap{
-    height: 70px;
-    min-height: 70px;
-    max-height: 70px;
-    font-size: $font-size;
+    height: 69px;
+    min-height: 69px;
+    max-height: 69px;
     line-height: normal;
     overflow: hidden;
 }
 
-.img-preview {
-    width: 130px;
-    max-width: 130px;
-    height: 100px;
-    max-height: 100px;
+.result-title {
+    display: block;
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+    -webkit-line-clamp: 3;
+} 
+
+.result-cap a:hover{
+    text-decoration: none;
 }
 
 
 /************CSS Helpers**************/   
 
 .-gray{
-    color: gray;
+    color: gray !important;
 }
-
 .-tcenter {
-    text-align: center;
+    text-align: center !important;
+}
+.-capital {
+    text-transform: capitalize !important;
 }

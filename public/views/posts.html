@@ -7,6 +7,9 @@
     <div class="search-results pull-left col-md-10">
         <div class="result-box pull-left" ng-repeat="user in data">
             <div class="result-preview center-block">
+                <div class="post-type-text-{{user.posts.type}}">
+                    <strong class="-capital">{{user.posts.type}}</strong>
+                </div>
                 <a title="{{user.posts.title}}" href="#">
                     <img class="img-preview" src="{{user.posts.photos[0]}}"/>
                 </a>

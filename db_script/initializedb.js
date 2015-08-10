@@ -148,6 +148,79 @@ var users = [
 		subscribedSearches: [
 		
 		]
+	},
+	{
+		username: "testuser",
+		password: "",
+		email: "regine@seansoftinc.com",
+		accountActive: true,
+		dateRegistered: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		ipAddr: "124.107.151.126",
+		lastLoginDate: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		name: "Test User",
+		userProvince: "Rizal",
+		userCity: "Angono",
+		mobileNo: "9330726232",
+		landline: "3612345",
+		inboxMsgs: [
+		
+		],
+		sentMsgs: [
+		
+		],
+		posts: [
+			{
+				type: "found",
+				postId: 635793873060012345,
+				title: "Harry Potter books",
+				category: "books, sports and hobbies",
+				description: "Harry Potter Order of the Phoenix & Deathly Hallows",
+				photos: [ 
+					"http://d2nc7ssst0481o.cloudfront.net/images_olxph/343487_1_1000x700.jpg",
+					"http://d2nc7ssst0481o.cloudfront.net/images_olxph/84761856_1_1000x700.jpg"
+				],
+				postProvince: "Abra",
+				postCity: "Bangued",				
+				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				postActive: true
+			},
+			{
+				type: "lost",
+				postId: 635793873060012346,
+				title: "Harry Potter Slytherin Scarf High Quality Scarves\nNot Official Merchandise",
+				category: "clothing and accessories",
+				description: "High Quality Scarves\nNot Official Merchandise\n\nAvailable \nGryffindor (2) / Slytherin (1)\n\nApprox 195cm*25cm\n\nFree Shipping Anywhere in the Philippines\n**Preferred Meet Up Places **\nWaltermart Munoz\n5th Avenue LRT\nZ Square Banawe\nJollibee Sto. Domingo Quezon City\nSM San Lazaro\nLRT1 Blumentritt until Edsa\nQuezon Avenue MRT\nTrinoma\nSM Sta Mesa\n\nFor other meet up locations, ask seller.",
+				photos: [ 
+					"http://d2zlxto7hswzbf.cloudfront.net/images_olxph/84786446_4_1000x700.jpg"
+				],
+				postProvince: "Laguna",
+				postCity: "Cabuyao",				
+				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				postActive: true
+			},
+			{
+				type: "found",
+				postId: 635793873060012347,
+				title: "Souvenir from Warner Brothers Studio Tour London - The Making of Harry Potter (6 pages). Passport - Making of Harry Potter ",
+				category: "books, sports and hobbies",
+				description: "Souvenir from Warner Brothers Studio Tour London - The Making of Harry Potter (6 pages). \n\nP50 each or 4 for P150. \nMon to Fri - meet up in MOA\nSat to Sun - meet up in Tiendesitas, Megamall or Greenhills area\n\nText- 0917- 8930130",
+				photos: [ 
+					"http://d3sczgjfkoadtq.cloudfront.net/images_olxph/85484614_1_1000x700.jpg",
+					"http://d3sczgjfkoadtq.cloudfront.net/images_olxph/85484614_2_1000x700.jpg",
+					"http://d3sczgjfkoadtq.cloudfront.net/images_olxph/85484614_3_1000x700.jpg"
+				],
+				postProvince: "Metro Manila",
+				postCity: "Pasig",				
+				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				postActive: true
+			}
+		],
+		bookmarkedPosts: [
+		
+		],
+		subscribedSearches: [
+		
+		]
 	}
 ];
 

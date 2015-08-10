@@ -22,7 +22,7 @@
                         <div class="col-md-3 col-sm-3 col-xs-4">
                             <carousel class='user-profile-post-carousel' interval="myInterval" no-wrap="noWrapSlides">
                               <slide ng-repeat="photo in post.photos" active="slide.active">
-                                <div class="user-profile-post-carousel-type-text-{{post.type}}"><strong style="text-transform: capitalize">{{post.type.toLowerCase()}}</strong></div>
+                                <div class="user-profile-post-carousel-type-text-{{post.type}}"><strong class="-capital">{{post.type.toLowerCase()}}</strong></div>
                                 <img class=" user-profile-post-carousel-photo" ng-src="{{photo}}" >                               
                               </slide>
                             </carousel>
