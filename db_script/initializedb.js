@@ -8,9 +8,9 @@ var users = [
 		password: "S$#ns0ft",
 		email: "reginegracein@gmail.com",
 		accountActive: true,
-		dateRegistered: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		dateRegistered: getDate(new Date(2015, 1, 1), new Date()),
 		ipAddr: "192.168.1.41",
-		lastLoginDate: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		lastLoginDate: getDate(new Date(2015, 1, 1), new Date()),
 		name: "Regine Grace In",
 		userProvince: "Metro Manila",
 		userCity: "Caloocan City",
@@ -22,7 +22,7 @@ var users = [
 				sender: "kenblizzard",
 				subject: "Starmobile Jump Neo Inquiry",
 				body: "Hello there, beautiful. I'm claiming my lost phone.\n\nHope I can meet up with you ASAP.\n\nWhen will you be available? Name your prize, plus I'll be treating you to a fine-dining restaurant.\nP.S. I love you very much.",
-				date: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				date: getDate(new Date(2015, 1, 1), new Date()),
 				read: false
 			}
 		],
@@ -41,7 +41,7 @@ var users = [
 				],
 				postProvince: "Metro Manila",
 				postCity: "Caloocan City",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: true
 			},
 			{
@@ -55,7 +55,7 @@ var users = [
 				],
 				postProvince: "Abra",
 				postCity: "Bangued",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: false
 			},
 			{
@@ -74,7 +74,7 @@ var users = [
 				],
 				postProvince: "Laguna",
 				postCity: "Cabuyao",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: true
 			},
 			{
@@ -90,7 +90,7 @@ var users = [
 				],
 				postProvince: "Metro Manila",
 				postCity: "Manila",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: true
 			}
 		],
@@ -106,9 +106,9 @@ var users = [
 		password: "S$#ns0ft",
 		email: "kenneth.bolico@gmail.com",
 		accountActive: true,
-		dateRegistered: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		dateRegistered: getDate(new Date(2015, 1, 1), new Date()),
 		ipAddr: "192.168.1.42",
-		lastLoginDate: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		lastLoginDate: getDate(new Date(2015, 1, 1), new Date()),
 		name: "Kenneth J. Bolico",
 		userProvince: "Metro Manila",
 		userCity: "Manila",
@@ -123,7 +123,7 @@ var users = [
 				recipient: "reginein",
 				subject: "Starmobile Jump Neo Inquiry",
 				body: "Hello there, beautiful. I'm claiming my lost phone.\n\nHope I can meet up with you ASAP.\n\nWhen will you be available? Name your prize, plus I'll be treating you to a fine-dining restaurant.\nP.S. I love you very much.",
-				date: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1))
+				date: getDate(new Date(2015, 1, 1), new Date())
 			}
 		],
 		posts: [
@@ -138,7 +138,7 @@ var users = [
 				],
 				postProvince: "Metro Manila",
 				postCity: "Manila",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: true
 			}
 		],
@@ -154,9 +154,9 @@ var users = [
 		password: "",
 		email: "regine@seansoftinc.com",
 		accountActive: true,
-		dateRegistered: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		dateRegistered: getDate(new Date(2015, 1, 1), new Date()),
 		ipAddr: "124.107.151.126",
-		lastLoginDate: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+		lastLoginDate: getDate(new Date(2015, 1, 1), new Date()),
 		name: "Test User",
 		userProvince: "Rizal",
 		userCity: "Angono",
@@ -181,7 +181,7 @@ var users = [
 				],
 				postProvince: "Abra",
 				postCity: "Bangued",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: true
 			},
 			{
@@ -195,7 +195,7 @@ var users = [
 				],
 				postProvince: "Laguna",
 				postCity: "Cabuyao",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: true
 			},
 			{
@@ -211,7 +211,7 @@ var users = [
 				],
 				postProvince: "Metro Manila",
 				postCity: "Pasig",				
-				datePosted: getDate(new Date(2015, 1, 1), new Date(2015, 5, 1)),
+				datePosted: getDate(new Date(2015, 1, 1), new Date()),
 				postActive: true
 			}
 		],
@@ -234,7 +234,7 @@ function getDate(start, end){
 		console.log('No end date provided');
 		throw 'failed to find an end date';
 	}	
-	var newdate = new Date(start.getTime() + (Math.floor(Math.random() * end.getMonth()) + 1)-50 * (end.getTime() - start.getTime())-100);
+	var newdate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 	console.log(newdate);
 	return newdate;
 }
