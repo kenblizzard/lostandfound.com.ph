@@ -42,7 +42,8 @@ var users = [
 				postProvince: "Metro Manila",
 				postCity: "Caloocan City",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: true
+				postActive: true,
+				views: 0
 			},
 			{
 				type: "lost",
@@ -56,7 +57,8 @@ var users = [
 				postProvince: "Abra",
 				postCity: "Bangued",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: false
+				postActive: false,
+				views: 10
 			},
 			{
 				type: "found",
@@ -75,7 +77,8 @@ var users = [
 				postProvince: "Laguna",
 				postCity: "Cabuyao",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: true
+				postActive: true,
+				views: 101
 			},
 			{
 				type: "found",
@@ -91,7 +94,8 @@ var users = [
 				postProvince: "Metro Manila",
 				postCity: "Manila",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: true
+				postActive: true,
+				views: 100999
 			}
 		],
 		bookmarkedPosts: [
@@ -139,7 +143,8 @@ var users = [
 				postProvince: "Metro Manila",
 				postCity: "Manila",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: true
+				postActive: true,
+				views: 235
 			}
 		],
 		bookmarkedPosts: [
@@ -182,7 +187,8 @@ var users = [
 				postProvince: "Abra",
 				postCity: "Bangued",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: true
+				postActive: true,
+				views: 16800
 			},
 			{
 				type: "lost",
@@ -196,7 +202,8 @@ var users = [
 				postProvince: "Laguna",
 				postCity: "Cabuyao",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: true
+				postActive: true,
+				views: 956
 			},
 			{
 				type: "found",
@@ -212,7 +219,8 @@ var users = [
 				postProvince: "Metro Manila",
 				postCity: "Pasig",				
 				datePosted: getDate(new Date(2015, 1, 1), new Date()),
-				postActive: true
+				postActive: true,
+				views: 467
 			}
 		],
 		bookmarkedPosts: [
