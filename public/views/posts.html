@@ -19,7 +19,7 @@
                         <div class="result-title-wrap">
                             <h4 class="result-title">{{user.posts.title}}</h4>
                         </div>
-                        <p class="-gray"><i class="fa fa-clock-o"></i><small> Posted {{user.posts.datePosted | formatMomentDate}}</small></p>
+                        <p class="-gray"><i class="fa fa-clock-o"></i><small> Posted {{user.posts.datePosted | momentDateFormatFilter}}</small></p>
                         <p class="-gray"><i class="fa fa-map-marker"></i><small> {{user.posts.postCity}}, {{user.posts.postProvince}}</small>
                         </p>
                     </a>

@@ -3,13 +3,20 @@
         <div class="col-md-10">
             <h1>Lost and found</h1>
             <p>{{ tagline }}</p>
+            <iframe name="hidden-iframe" class="-invisible" src="about:blank"></iframe>
             <div class="home-search-panel text-left">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Hanapin ang iyong nawawalang gamit, alagang hayop at iba pa...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="searchItem()"><i class="glyphicon glyphicon-search"></i> Search</button>
-                    </span>
-                </div>                
+                <form target="hidden-iframe" action="about:blank">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="main-search-box" 
+                        placeholder="Hanapin ang iyong nawawalang gamit, alagang hayop at iba pa..."
+                        ng-keypress="keyPress($event, queryItem)" autocomplete="on" ng-model="queryItem">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit" ng-click="searchItem(queryItem)">
+                                <i class="glyphicon glyphicon-search"></i> Search
+                            </button>
+                        </span>
+                    </div>
+                </form>                
             </div>
             <h2>O</h2>
             <a class="btn btn-success">I-post ang nakita mong gamit, hayop at iba pa...</a>

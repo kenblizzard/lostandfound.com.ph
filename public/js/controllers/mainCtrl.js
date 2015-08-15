@@ -4,6 +4,7 @@ angular.module('lostAndFoundApp').controller('MainController',
         PostFactory.getPost(1);
         uiGmapGoogleMapApi.then(function () {
             console.log('map is ready');
+            $('#main-search-box').focus();
         });
 
         var events = {
@@ -40,7 +41,13 @@ angular.module('lostAndFoundApp').controller('MainController',
 
         var geocoder = new google.maps.Geocoder();        
 
-        $scope.searchItem = function () {
-            alert('hi');
+        $scope.searchItem = function (queryItem) {
+            window.location.href = "/posts/" + queryItem;
+        }
+
+        $scope.keyPress = function(keyEvent, queryItem) {
+            if(keyEvent.which == 13){   //enter key
+                window.location.href = "/posts/" + queryItem;
+            }
         }
     }]);

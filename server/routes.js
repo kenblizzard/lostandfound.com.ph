@@ -21,7 +21,6 @@ module.exports = function (app) {
     });
 
     app.get('/api/posts/:query', function (req, res) {
-        console.log("Query: ", req.params.query);
         postsModel.getPosts(req.params.query, sendDataCallback, res);
     });
 

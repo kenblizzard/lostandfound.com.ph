@@ -265,3 +265,6 @@ body {
 .-capital {
     text-transform: capitalize !important;
 }
+.-invisible {
+    display: none !important;
+}
