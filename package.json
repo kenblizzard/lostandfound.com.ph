@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "A website for lost and found items in the Philippines",
   "main": "app.js",
+
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+     "start": "node app.js"
   },
   "repository": {
     "type": "git",
