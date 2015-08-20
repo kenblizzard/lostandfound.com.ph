@@ -2,6 +2,8 @@
 //location search engine of facebook or google maps, I think, would be better
 
 //I'm not quite sure how mongodb stores newline, but I've used "\n" here...
+
+var ObjectId = require('mongodb').ObjectId
 var users = [
 	{
 		username: "reginein",
@@ -32,7 +34,7 @@ var users = [
 		posts: [
 			{
 				type: "found",
-				postId: 635793873060000000,
+				postId: new ObjectId(),
 				title: "Harry Potter The Complete Series Book 1-7 (paperback)",
 				category: "books, sports and hobbies",
 				description: "Complete Harry potter Series. In good condition",
@@ -47,7 +49,7 @@ var users = [
 			},
 			{
 				type: "lost",
-				postId: 635793873060000323,
+				postId: new ObjectId(),
 				title: "Harry Potter books 7 pcs",
 				category: "books, sports and hobbies",
 				description: "Used Harry Potter books not mint. Sold as set. Meet ups can be in Cubao area only.",
@@ -62,7 +64,7 @@ var users = [
 			},
 			{
 				type: "found",
-				postId: 635793873060000324,
+				postId: new ObjectId(),
 				title: "Harry Potter Gryffindor Slytherin Scarf",
 				category: "clothing and accessories",
 				description: "High Quality Scarves\nNot Official Merchandise\n\nAvailable \nGryffindor (2) / Slytherin (1)\n\nApprox 195cm*25cm\n\nFree Shipping Anywhere in the Philippines\n**Preferred Meet Up Places **\nWaltermart Munoz\n5th Avenue LRT\nZ Square Banawe\nJollibee Sto. Domingo Quezon City\nSM San Lazaro\nLRT1 Blumentritt until Edsa\nQuezon Avenue MRT\nTrinoma\nSM Sta Mesa\n\nFor other meet up locations, ask seller.",
@@ -82,7 +84,7 @@ var users = [
 			},
 			{
 				type: "found",
-				postId: 635793873060000327,
+				postId: new ObjectId(),
 				title: "Starmobile Jump Neo",
 				category: "mobile phones and tablets",
 				description: "Call or text for faster transaction\n09068028734\n\nMeet up: SM North, Monumento, Trinoma, Waltermart Munoz",
@@ -123,7 +125,7 @@ var users = [
 		],
 		sentMsgs: [
 			{
-				sentId: 6357938730600002347,
+				sentId: new ObjectId(),
 				recipient: "reginein",
 				subject: "Starmobile Jump Neo Inquiry",
 				body: "Hello there, beautiful. I'm claiming my lost phone.\n\nHope I can meet up with you ASAP.\n\nWhen will you be available? Name your prize, plus I'll be treating you to a fine-dining restaurant.\nP.S. I love you very much.",
@@ -133,7 +135,7 @@ var users = [
 		posts: [
 			{
 				type: "lost",
-				postId: 635793873060000456,
+				postId: new ObjectId(),
 				title: "Starmobile Jump Neo",
 				category: "mobile phones and tablets",
 				description: "I've lost it somewhere in V. Mapa, Sta. Mesa Manila on my way to work. I'm willing to treat the finder to any restaurant he/she wants.",
@@ -176,7 +178,7 @@ var users = [
 		posts: [
 			{
 				type: "found",
-				postId: 635793873060012345,
+				postId: new ObjectId(),
 				title: "Harry Potter books",
 				category: "books, sports and hobbies",
 				description: "Harry Potter Order of the Phoenix & Deathly Hallows",
@@ -192,7 +194,7 @@ var users = [
 			},
 			{
 				type: "lost",
-				postId: 635793873060012346,
+				postId: new ObjectId(),
 				title: "Harry Potter Slytherin Scarf High Quality Scarves\nNot Official Merchandise",
 				category: "clothing and accessories",
 				description: "High Quality Scarves\nNot Official Merchandise\n\nAvailable \nGryffindor (2) / Slytherin (1)\n\nApprox 195cm*25cm\n\nFree Shipping Anywhere in the Philippines\n**Preferred Meet Up Places **\nWaltermart Munoz\n5th Avenue LRT\nZ Square Banawe\nJollibee Sto. Domingo Quezon City\nSM San Lazaro\nLRT1 Blumentritt until Edsa\nQuezon Avenue MRT\nTrinoma\nSM Sta Mesa\n\nFor other meet up locations, ask seller.",
@@ -207,7 +209,7 @@ var users = [
 			},
 			{
 				type: "found",
-				postId: 635793873060012347,
+				postId: new ObjectId(),
 				title: "Souvenir from Warner Brothers Studio Tour London - The Making of Harry Potter (6 pages). Passport - Making of Harry Potter ",
 				category: "books, sports and hobbies",
 				description: "Souvenir from Warner Brothers Studio Tour London - The Making of Harry Potter (6 pages). \n\nP50 each or 4 for P150. \nMon to Fri - meet up in MOA\nSat to Sun - meet up in Tiendesitas, Megamall or Greenhills area\n\nText- 0917- 8930130",

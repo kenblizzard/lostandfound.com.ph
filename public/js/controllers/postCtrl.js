@@ -2,6 +2,15 @@ angular.module('lostAndFoundApp').controller('PostController',
    ['$scope', 'PostFactory', 'uiGmapGoogleMapApi', '$routeParams',
     function ($scope, PostFactory, uiGmapGoogleMapApi, $routeParams) {
 
+console.log($routeParams);
+        PostFactory.getPost($routeParams.postId)
+                .then(function (data) {
+                    $scope.post = data[0].posts;
+                    console.log($scope.post);
+                });
+       
+
+
         uiGmapGoogleMapApi.then(function () {
             console.log('map is ready');
         });
@@ -36,18 +45,5 @@ angular.module('lostAndFoundApp').controller('PostController',
         $scope.options = { scrollwheel: false };
         $scope.searchbox = { template: 'searchbox.tpl.html', events: events };
 
-
-
-
-        $scope.getPost = function () {
-            console.log($routeParams);
-            PostFactory.getPost($routeParams.postId)
-                .then(function (data) {
-                    $scope.post = data;
-                });
-        };
-
-        $scope.searchItem = function () {
-            alert('hi');
-        }
+        
     }]);

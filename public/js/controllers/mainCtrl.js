@@ -1,7 +1,7 @@
 angular.module('lostAndFoundApp').controller('MainController',
     ['$scope', 'uiGmapGoogleMapApi', 'PostFactory',
     function ($scope, uiGmapGoogleMapApi, PostFactory) {        
-        PostFactory.getPost(1);
+        // PostFactory.getPost(1);
         uiGmapGoogleMapApi.then(function () {
             console.log('map is ready');
             $('#main-search-box').focus();

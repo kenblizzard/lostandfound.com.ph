@@ -11,7 +11,7 @@ var express = require('express');
 var app = express();
 var http = require('http');
 var server = http.createServer(app);
-var io = require('socket.io')(server);
+//var io = require('socket.io')(server);
 
 // configuration ===========================================
 var port = config.port; 
@@ -35,9 +35,9 @@ server.listen(port, function () {
 //io.listen(app);
 
 
-io.on('connection', function (socket) {
-    console.log('connected to socket.io');
-});
+// io.on('connection', function (socket) {
+//     console.log('connected to socket.io');
+// });
 
           
 exports = module.exports = app;                         

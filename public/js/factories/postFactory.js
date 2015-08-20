@@ -8,8 +8,10 @@ angular.module('lostAndFoundApp').factory('PostFactory', ['$http', '$q', functio
 
         getPost: function (id) {            
             var defer = $q.defer();
+            console.log(id);
             $http.get('api/post/' + id)
-            .success(function (data) {                                
+            .success(function (data) {    
+            console.log(id);
                 defer.resolve(data);
             });
 

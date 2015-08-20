@@ -39,6 +39,38 @@ var postsDb = {
             });
         });
 
+    },
+
+    getPost: function(id, sendDataCallback, res) {        
+        MongoClient.connect(url, function (err, db) {
+            if (err) {
+                console.log('postsDb - getPosts: Error connecting to MongoDb: ' + err);
+            }
+
+            var collection = db.collection('users');
+            collection.aggregate([
+                {
+                    $unwind: "$posts"
+                },
+                {
+                    $match: {
+                        "posts.postId": ObjectId(id)
+                    }
+                },
+                {
+                    $project: {
+                        "posts": 1,
+                        "_id": 0
+                    }
+                }
+            ]).toArray(function (err, data) {
+                if (err) {
+                    console.log("Error: ", err);
+                }               
+                db.close();
+                sendDataCallback(res, data);
+            });
+        });
     }
 }
 

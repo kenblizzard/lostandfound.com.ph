@@ -2,7 +2,7 @@
     ['$http', '$q',
         function ($http, $q) {
 
-    var socket = io.connect();
+    // var socket = io.connect();
 
     return {
         // call to get all nerds

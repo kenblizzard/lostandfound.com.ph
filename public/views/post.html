@@ -1,8 +1,31 @@
-﻿<h1>Post</h1>
+﻿
 
-<script type="text/ng-template" id="searchbox.tpl.html">
+<div class="container content-container">
+
+	<h3>{{post.title}}</h1>
+	
+	<div class="col-md-8">
+
+	<p><b>Location: </b> {{post.postCity}}, {{post.postProvince}}</p>
+		<carousel  interval="myInterval" no-wrap="noWrapSlides">
+          <slide ng-repeat="photo in post.photos" active="slide.active">           
+            <img class="img-thumbnail" ng-src="{{photo}}" >                               
+          </slide>
+        </carousel>
+	
+	<br>
+	<p><b>Posted: </b> {{post.datePosted | momentDateFormatFilter}}</p>
+	<p><b>Description: </b>{{post.description}}</p>
+
+		
+	</div>
+</div>
+
+
+<!-- 
+	<script type="text/ng-template" id="searchbox.tpl.html">
         <input type="text" placeholder="Search Box">
     </script>
     <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
         <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
-    </ui-gmap-google-map>
+    </ui-gmap-google-map> -->

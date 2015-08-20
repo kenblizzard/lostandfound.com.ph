@@ -12,8 +12,8 @@ module.exports = function (app) {
     // handle things like api calls
     // authentication routes
 
-    app.get('/api/post/:id', function (req, res) {      
-        res.send(postsModel.getPost(req.params.id));
+    app.get('/api/post/:postId', function (req, res) {      
+        postsModel.getPost(req.params.postId, sendDataCallback, res);
     });
 
     app.get('/api/user/:id', function (req, res) {        
